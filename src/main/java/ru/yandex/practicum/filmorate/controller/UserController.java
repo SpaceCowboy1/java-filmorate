@@ -33,7 +33,7 @@ public class UserController {
 
     @PutMapping
     public User update(@Valid @RequestBody User user) {
-        if(!userHashMap.containsKey(user.getId())) {
+        if (!userHashMap.containsKey(user.getId())) {
             log.debug("Пользователь не найден");
             throw new ValidationException("Пользователь не найден");
         }
