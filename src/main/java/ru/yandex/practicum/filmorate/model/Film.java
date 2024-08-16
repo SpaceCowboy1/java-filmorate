@@ -21,7 +21,7 @@ public class Film {
     @Size(max = 200, message = "Максимальное количество символов 200")
     private String description;
     //TODO releaseDate annotation
-    @ReleaseDate
+    @ReleaseDate(value = "1895-12-28", message = "Дата релиза не ранее 28 декабря 1895 года.")
     private LocalDate releaseDate;
     @Positive(message = "Продолжительность фильма должна быть положительным числом.")
     private Integer duration;
